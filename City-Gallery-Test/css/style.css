@@ -1,0 +1,154 @@
+* { /*Bordure et padding inclus dans la taille totale de la boîte ! A UTILISER !*/
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /*Héritage pour les propriétés de texte*/
+}
+
+header, nav, main, footer {
+    padding: 16px;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header, footer {
+    background-color: #20b2aa;
+    max-width: 1200px;
+    text-align: center;
+    color: white;
+}
+
+/*Ancien code OBSOLETE*/
+/* nav, main { */
+    /* display: inline-block; */
+    /* vertical-align: top; */
+    /*Vertical-align fonctionne que sur éléments inline*/
+    /* min-height: 800px;  */
+        /*Important pour éviter le débordement si bcp de contenu*/
+/* } */
+/*Ancien code OBSOLETE*/
+
+#centre {
+    display: flex;
+    /*flex-direction: row par défaut*/
+    /* justify-content: flex-start par défaut */
+    /*align-items: stretch par défaut*/
+    /* align-content: flex-start par défaut*/
+    flex-wrap: wrap;
+}
+
+nav {
+    background-color: #8fd8d5;
+    /* width: 30%;
+    min-width: 300px; */
+    flex: 1;
+}
+
+main {
+    background-color: #e9fbfa;
+    /* width: 70; */
+    /*Attention inline-block whitespace 4px*/
+    /* min-width: 300px; */
+    flex: 2;
+}
+
+#titre-logo {
+    font-size: 45px;
+    margin: 0;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-link {
+    text-decoration: none;
+    display: block;
+    padding: 16px;
+    color: white;
+    font-size: larger;
+}
+
+h1, h2 {
+    color: #20b2aa;
+    text-align: left;
+}
+
+.nav-link:hover { /*Pseudo class*/
+    color: grey;
+    background-color: #20b2aa;
+}
+
+th, td {
+    border: 1px solid black;
+}
+
+.rouge {
+    color: red;
+}
+
+.vert {
+    color: green;
+}
+
+.vert {
+    color: violet;
+}
+
+td {
+    color: orange;
+}
+
+#violet {
+    color: fuchsia;
+}
+
+.rouge.plus {
+    color: blue;
+}
+
+.plus {
+    color: green;
+}
+
+.brown {
+    color: brown;
+}
+
+.brown .plus {
+    color: pink;
+}
+
+[title="50"] {
+    color: red;
+}
+
+/*
+* < balise < .class < class+class < #id < inline style
+*/
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px; /*fontionnalité nouvelle depuis 1-2 ans -- remplace margin sur enfant*/
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background-color: grey;
+    /* margin: 8px; */
+    display: flex;
+    justify-content: center; /*Axe H*/
+    align-items: center; /*Axe V*/
+}
