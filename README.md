@@ -1,7 +1,7 @@
-<h1 align="center">Hi 👋, I'm Angelique PHILIPPE</h1>
-<h3 align="center">A passionate frontend developer</h3>
+<h1 align="center">Angelique PHILIPPE</h1>
+<h3 align="center">Passionnée par la programmation, je souhaite mettre mes compétences au service d'une entreprise dynamique  et fière de ses projets.r</h3>
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">Contactez-moi :</h3>
 <p align="left">
 </p>
 
