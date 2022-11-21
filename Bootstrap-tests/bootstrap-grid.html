@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="bg-dark text-light p-1">
+        <div class="container">
+            <!-- Créer un container de 2nd niveau pour que le logo soit bien aligné avec un retrait -->
+            <a href="#">LOGO</a>
+        </div>
+    </header>
+    <main class="container border border-danger">
+        <section class="row border border-warning">
+            <h1 class="text-danger">Titre <i class="bi bi-facebook"></i></h1>
+        </section>
+
+        <!-- Méthode Bootstrap pour faire du wrap (12 colonnes) -->
+        <!-- class align-items-center : anulat° du stretch -->
+        <section class="row border border-primary justify-content-lg-between" style="min-height:200px">
+            <div class="col-lg-5 border border-primary d-flex justify-content-center align-items-center">LEFT</div>
+            <div class="col-lg-5 border border-primary">
+                <article class="card">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="row border border-primary" style="min-height: 200px;">
+            <div class="col-sm-6 col-md-8 col-lg-10 col-xl-2 border border-primary">LEFT</div>
+            <div class="col-sm-6 col-md-4 col-lg-2 col-xl-10 border border-primary">RIGHT</div>
+        </section>
+
+        <section class="row border border-primary" style="min-height: 200px;">
+            <div class="col-md-2 border border-primary">LEFT</div>
+            <div class="col-md-2 offset-md-4 border border-primary">CENTER</div>
+            <div class="col-md-2 border border-primary">RIGHT
+                <a class="btn btn-primary" href="#">ACHETER</a>
+            </div>
+        </section>
+
+    </main>
+    <footer class="container-fluid bg-dark text-light p-1">
+        <p>FOOTER</p>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
