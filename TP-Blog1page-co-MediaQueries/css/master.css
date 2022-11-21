@@ -1,0 +1,263 @@
+/*Feuille de style principale*/
+
+/* Importation feuille de style police Google Font */
+/* ANCHOR @import toujours en premier */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ANCHOR CSS par défaut (pour réutiliser)*/ 
+
+/* VARIABLES */ /*on dit qu'on déclare une variable*/
+:root { /*racine html (racine de tous les noeuds >)*/
+    --color-white: #fff; /*Assigner/stocker une valeur*/
+    --color-primary: rgb(2, 3, 66);
+    --default-margin: 1rem;
+}
+
+* {
+    box-sizing: border-box;
+    /* background-color: rgba(0,0,0,0.1);
+    border: 1px solid white; */
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger; /*Confort de lecture*/
+}
+
+img {
+    width: 100%;
+}
+
+/*ANCHOR Custom CSS*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 1rem 0;
+}
+
+a, button {
+    padding: 1rem;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+header, main, footer {
+    padding: 1rem;
+}
+
+header, footer {
+    background-color: var(--color-primary);
+    color: var(--color-white); /*Utilisation de la variable*/
+}
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1320px;
+    margin: auto;
+    min-height: calc(100vh - 90px);
+    /* min-height: 50vh;*/  /*50% du viewport */
+}
+
+article {
+    /* box-shadow: x y flou couleur; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+footer section {
+    border-left: 2px solid var(--color-white);
+    padding: 1rem;
+}
+
+footer > :last-child {
+    width: 100%;
+}
+
+/* TODO régler pb affichage <250px*/
+#loupe {
+    min-width: 20px;
+}
+
+#logo-link {
+    padding: 0;
+}
+
+.design {
+    min-height: 400px;
+    background-image: url('images/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+}
+
+.pagination a {
+    /* display: inline-block; */
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0;
+    width: 48px;
+    aspect-ratio: 1/1;
+}
+.sm a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 2rem;
+    /* max-width: 30px;
+    max-height: 30px;
+    padding: 2px;
+    border-radius: 4px; */
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.tag {
+    top: initial;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 4px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    margin: 0;
+    /* border-style: groove; */
+}
+
+#formulaire {
+    flex: 2 2 600px;
+}
+
+/* ANCHOR BUTTON */
+
+.btn-light {
+    display: inline-block;
+    padding: 16px;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin-top: 16px;
+    transition: 500ms;
+    /* transition-: background-color 1s; */
+    }
+
+.btn-light:hover {
+    background-color: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+}
+
+.btn-dark {
+    display: inline-block;
+    padding: 16px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-radius: 5px;
+    border: 2px solid transparent;
+    margin-top: 16px;
+}
+
+
+/* ANCHOR CONTAINER FLEX (parents) PAR DEFAUT */
+
+.d-flex {
+    display: flex;
+}
+
+.fw-w {
+    /* Important pour le responsive */
+    flex-wrap: wrap;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-c {
+    justify-content: center;
+}
+
+.ai-c {
+    align-items: center;
+}
+
+.g-1 {
+    gap: 1rem;
+}
+.g-2 {
+    gap: 2rem;
+}
+
+/* ANCHOR Items Flex (enfants) PAR DEFAUT */
+
+.f-300 {
+    flex: 1 1 300px;
+}
+.f-500 {
+    /* ENFANTS DIRECTS */
+    /* width: 50%; */
+    /* flex: 1; */ /*Super propriété qui regroupe :*/
+    /*flex-grow: 1; /*Capacité à grossir*/
+    /*flex-shrink: 1; /*Capacité à maigrir*/
+    /*flex-basis: 300px; /*Equivalent du mi-width - point de rupture du wrap*/
+    flex: 1 1 500px; /*Largeur de référence*/
+}
+
+/* ANCHOR SPACING */
+
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.p-1 {
+    padding: 1rem;
+}
+
+/* ANCHOR SIZING */
+
+/* ANCHOR TYPO */
+
+.txt-c {
+    text-align: center;
+}
+
+.txt-white {
+    color: var(--color-white);
+}
+
+@media screen and (min-width: 1300px) {
+    :root {
+        --color-primary: rgb(22, 0, 22);
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .tag {
+        top: 1rem;
+        bottom: initial;
+    }
+}
+
+/* 16px = 1em = 1rem */
+
+/* Dry, don't repeat yourself */
